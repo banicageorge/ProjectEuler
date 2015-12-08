@@ -55,6 +55,7 @@
     <Compile Include="Problems\IProblems.cs" />
     <Compile Include="Problems\Problem_01.cs" />
     <Compile Include="Problems\Problem_02.cs" />
+    <Compile Include="Problems\Problem_03.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
