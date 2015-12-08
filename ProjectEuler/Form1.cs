@@ -45,7 +45,9 @@ namespace ProjectEuler
             else
                 problem = (IProblems)MagicallyCreateInstance("Problem_" + selectedIndex.ToString());
 
+            problem.Input = inputRichTextBox.Text;
             problem.run();
+            outputRichTextBox.Text = problem.Output;
 
         }
     }
