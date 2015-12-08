@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.inputRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.outputRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.listProblemsComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.startButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // inputRichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(20, 99);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(287, 225);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.inputRichTextBox.Location = new System.Drawing.Point(20, 99);
+            this.inputRichTextBox.Name = "inputRichTextBox";
+            this.inputRichTextBox.Size = new System.Drawing.Size(287, 225);
+            this.inputRichTextBox.TabIndex = 0;
+            this.inputRichTextBox.Text = "";
             // 
-            // richTextBox2
+            // outputRichTextBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(313, 99);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(287, 225);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.outputRichTextBox.Location = new System.Drawing.Point(313, 99);
+            this.outputRichTextBox.Name = "outputRichTextBox";
+            this.outputRichTextBox.Size = new System.Drawing.Size(287, 225);
+            this.outputRichTextBox.TabIndex = 1;
+            this.outputRichTextBox.Text = "";
             // 
-            // comboBox1
+            // listProblemsComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.listProblemsComboBox.FormattingEnabled = true;
+            this.listProblemsComboBox.Items.AddRange(new object[] {
             "1. Multiples of 3 and 5",
             "2. Even Fibonacci numbers\t",
             "3. Largest prime factor\t",
@@ -67,11 +67,11 @@
             "8. Largest product in a series\t",
             "9. Special Pythagorean triplet\t",
             "10. Summation of primes"});
-            this.comboBox1.Location = new System.Drawing.Point(20, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(287, 21);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.listProblemsComboBox.Location = new System.Drawing.Point(20, 41);
+            this.listProblemsComboBox.Name = "listProblemsComboBox";
+            this.listProblemsComboBox.Size = new System.Drawing.Size(287, 21);
+            this.listProblemsComboBox.TabIndex = 2;
+            this.listProblemsComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -100,27 +100,29 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Output";
             // 
-            // button1
+            // startButton
             // 
-            this.button1.Location = new System.Drawing.Point(525, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
+            this.startButton.Enabled = false;
+            this.startButton.Location = new System.Drawing.Point(525, 39);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.TabIndex = 6;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 428);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.startButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.listProblemsComboBox);
+            this.Controls.Add(this.outputRichTextBox);
+            this.Controls.Add(this.inputRichTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -130,13 +132,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox inputRichTextBox;
+        private System.Windows.Forms.RichTextBox outputRichTextBox;
+        private System.Windows.Forms.ComboBox listProblemsComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button startButton;
     }
 }
 
