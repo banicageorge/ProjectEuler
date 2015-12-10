@@ -23,7 +23,7 @@ namespace ProjectEuler.Problems
         {
             int n = Int32.Parse(Input);
             bool found = false;
-            long i = 2;
+            long i = 2*3*5*7*11*13*17*19; 
 
             while (found == false)
             {
